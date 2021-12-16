@@ -5,6 +5,10 @@ export const GlobalStyle = createGlobalStyle`
         --background: #f0f2f5;
         --shape: #FFFFFF;
         --dark: #313131;
+        --orange: #DA471A;
+
+        /* Tags Pokemon colors */
+        --grass: #9bcc50;
     }
 
     * {
