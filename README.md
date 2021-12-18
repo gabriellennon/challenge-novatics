@@ -39,12 +39,6 @@ npm install
 yarn start
 <br />
 
-## :memo: License
-
-Este projeto esta sob a [MIT license](LICENSE) para mais detalhes.
-<br />
-<br />
-
 ## :wave: Social
 
 Siga @gabriellennon nas redes :wink:
