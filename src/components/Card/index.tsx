@@ -25,7 +25,7 @@ export function Card({
 }: CardProps){
     return (
         <>
-            <ContainerCard>
+            <ContainerCard >
                 <ImageCard>
                     <img src={image} alt="Pokemon Image" />
                 </ImageCard>
