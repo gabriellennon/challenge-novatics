@@ -8,21 +8,37 @@ import {
     TagPokemon,
 } from "./styles";
 
-export function Card(){
+interface CardProps{
+    id: number;
+    image: string;
+    numberPokemon: string;
+    namePokemon: string;
+    tagPokemon: string[];
+}
+
+export function Card({
+    id,
+    image,
+    numberPokemon,
+    namePokemon,
+    tagPokemon
+}: CardProps){
     return (
         <>
             <ContainerCard>
                 <ImageCard>
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/359.png" alt="Pokemon Image" />
+                    <img src={image} alt="Pokemon Image" />
                 </ImageCard>
-                <NumberPokemon>#001</NumberPokemon>
+                <NumberPokemon>#{numberPokemon}</NumberPokemon>
                 <InfosPokemon>
-                    <NamePokemon>Bulbasaur</NamePokemon>
+                    <NamePokemon>{namePokemon}</NamePokemon>
                     <Tags>
-                        <TagPokemon>Grass</TagPokemon>
-                        <TagPokemon>Grass</TagPokemon>
+                    {tagPokemon.map(tag => {
+                        return (
+                            <TagPokemon>{tag}</TagPokemon>
+                        )
+                    })}
                     </Tags>
-
                 </InfosPokemon>
             </ContainerCard>
         </>

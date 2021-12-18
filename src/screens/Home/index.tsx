@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import searchSvg from '../../assets/icons/search.svg';
 import { Card } from '../../components/Card';
+import { api } from '../../services/api';
 
 import { 
     Filters, 
@@ -7,8 +9,24 @@ import {
     ContainerCards,
     SelectFilter,
 } from "./styles";
+interface PokemonDataModel {
+    id: number;
+    num: string;
+    name: string;
+    img: string;
+    type: string[];
+}
 
 export function Home() {
+    const [pokemonsData, setPokemonsData] = useState<PokemonDataModel[]>([]);
+    
+    useEffect(() => {
+        api.get('pokedex.json')
+        .then(response => setPokemonsData(response.data.pokemon))
+    },  []);
+
+    console.log(pokemonsData);
+
     return (
         <>
             <Container>
@@ -24,10 +42,17 @@ export function Home() {
                     </select>
                 </SelectFilter>
                 <ContainerCards>
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    {pokemonsData.map(data => {
+                        return (
+                            <Card 
+                                id={data.id}
+                                image={data.img}
+                                numberPokemon={data.num}
+                                namePokemon={data.name}
+                                tagPokemon={data.type}
+                            />
+                        )
+                    })}
                 </ContainerCards>
             </Container>
         </>
