@@ -24,19 +24,18 @@ Software pensado em você grande mestre pokemon, para lhe trazer maior comodidad
 
 Para colocar o projeto para rodar, basta seguir o passo a passo fornecido logo abaixo:
 
-# Abra um terminal e copie este repositório com o comando
-git clone https://github.com/gabriellennon/challenge-novatics.git
-# ou use a opção de download.
+1)Abra um terminal e copie este repositório com o comando
+git clone https://github.com/gabriellennon/challenge-novatics.git ou use a opção de download.
 
-# Entre na pasta web com 
+2)Entre na pasta web com 
 cd challenge-novatics
 
-# Instale as dependências
+3)Instale as dependências
 yarn install 
 ou 
 npm install
 
-# Rode a aplicação
+4)Rode a aplicação
 yarn start
 <br />
 
