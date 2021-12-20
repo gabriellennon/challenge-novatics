@@ -29,10 +29,22 @@ export function Home() {
 
     const searchPokemon = pokemonsData.filter((pokemon) => pokemon.name.toLowerCase().startsWith(search.toLowerCase()) || pokemon.num.startsWith(search))
 
+    //Method order by pokemons
     function sortFilter(event: string){
-        if(event === 'a'){
-            console.log('a')
-        } else {
+        if (event == 'a') {
+            searchPokemon.sort(function (a, b) {
+              var dateA = a.name;
+              var dateB = b.name;
+              if (dateA < dateB) {
+                return -1;
+              }
+              if (dateA > dateB) {
+                return 1;
+              }
+      
+              return 0;
+            });
+          } else {
             console.log('b')
         }
     }
