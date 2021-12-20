@@ -17,7 +17,7 @@ export const Filters = styled.div`
         padding: 8px 12px;
         border: none;
         height: 40px;
-        width: 92%;
+        width: 100%;
     }
 
     button {
