@@ -71,7 +71,20 @@ export function Home() {
 
                 result = reordernar
               } else {
-                console.log('b')
+                const reordernar = result.sort(function (a, b) {
+                    var nameA = a.name;
+                    var nameB = b.name;
+                    if (nameB < nameA) {
+                      return -1;
+                    }
+                    if (nameB > nameA) {
+                      return 1;
+                    }
+            
+                    return 0;
+                  });
+
+                result = reordernar
             }
         }
 
