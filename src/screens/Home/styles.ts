@@ -61,3 +61,8 @@ export const SelectFilter = styled.div`
         margin-top: 40px;
     }
 `;
+
+export const LoadingStyle = styled.div`
+    text-align: center;
+    margin: 40px auto;
+`;

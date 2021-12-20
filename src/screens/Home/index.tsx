@@ -2,12 +2,14 @@ import { FormEvent, useEffect, useState } from 'react';
 import searchSvg from '../../assets/icons/search.svg';
 import { Card } from '../../components/Card';
 import { api } from '../../services/api';
+import ClipLoader from "react-spinners/ClipLoader";
 
 import { 
     Filters, 
     Container, 
     ContainerCards,
     SelectFilter,
+    LoadingStyle
 } from "./styles";
 interface PokemonDataModel {
     id: number;
@@ -94,9 +96,9 @@ export function Home() {
 
     if(loading){
         return (
-            <div>
-                loading
-            </div>
+            <LoadingStyle>
+                <ClipLoader color="DA471A" loading={loading} size={80} />
+            </LoadingStyle>
         )
     }
     return (
